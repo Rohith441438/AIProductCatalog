@@ -35,6 +35,6 @@ dotnet run --project ProductService.Api/ProductService.Api.csproj
 
 ## Notes
 
-- SQLite is used (`product-service.db`).
-- Database schema is auto-created at startup via `EnsureCreated()`.
+- SQL Server is used via `DefaultConnection` in `appsettings.json`.
+- Database is auto-created at startup via `EnsureCreated()` (suitable for local dev; use migrations for production).
 - Change `Jwt:Key` in `appsettings.json` before production use.
